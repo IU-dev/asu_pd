@@ -69,12 +69,14 @@
                         <a href="index.php" class="nav-link <?php echo($page == "index.php" ? "active" : ""); ?>" aria-current="page">
                             Главная
                         </a>
+                        <?php if (isset($user->username)) : ?>
                         <a href="practises.php" class="nav-link <?php echo($page == "practises.php" ? "active" : ""); ?>" aria-current="page">
                             Практики
                         </a>
                         <a href="projects.php" class="nav-link <?php echo($page == "projects.php" ? "active" : ""); ?>" aria-current="page">
                             Мои проекты
                         </a>
+                        <?php endif ?>
                     </li>
                     <?php if (isset($user->username)) : ?>
                     <li class="nav-item">
